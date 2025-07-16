@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FYXZ PEDIA DEVELOPER</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background-image: url('https://wallpapercave.com/wp/wp5128415.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px #000;
+    }
+
+    img.logo {
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #25D366;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button.qris-btn {
+      background-color: #ff9800;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .qris-image {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://img1.pixhost.to/images/7255/622646525_skyzopedia.jpg" class="logo" alt="Logo FYXZ" />
+    <h2>FYXZ PEDIA DEVELOPER</h2>
+    <p><strong>Alamat:</strong> Indonesia</p>
+    <p><strong>Email:</strong> kamu@email.com</p>
+
+    <a href="https://wa.me/6281234567890" target="_blank">
+      <button>Hubungi via WhatsApp</button>
+    </a>
+
+    <button class="qris-btn" onclick="showQRIS()">Tampilkan QRIS & Rekening</button>
+
+    <div id="qrisSection" class="hidden">
+      <img src="https://files.catbox.moe/49y4g8.jpg" alt="QRIS" class="qris-image" />
+      <p><strong>No. Rekening:</strong> 1234567890 a/n Nama Kamu</p>
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/9m0kjm.mp4" type="audio/mp4" />
+  </audio>
+
+  <script>
+    function showQRIS() {
+      document.getElementById("qrisSection").classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
