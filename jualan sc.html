@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produk & Pembayaran</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://files.catbox.moe/n0z3sl.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .container {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .produk-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .produk {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .produk img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .produk p {
+      margin: 15px 0;
+    }
+
+    .btn {
+      background-color: #f39c12;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e67e22;
+      transform: scale(1.05);
+    }
+
+    .qris-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: rgba(0, 0, 0, 0.95);
+      padding: 30px;
+      border-radius: 20px;
+      z-index: 1000;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .qris-popup img {
+      width: 200px;
+      margin-bottom: 15px;
+    }
+
+    .qris-popup.show {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .close-btn {
+      background: crimson;
+      color: white;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 20px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛍️ Produk Unggulan</h1>
+    <div class="produk-list">
+      <div class="produk">
+        <img src="https://files.catbox.moe/1a1b2c.jpg" alt="Produk 1">
+        <p>🔥 Panel Premium Murah dan Cepat</p>
+        <button class="btn" onclick="toggleQris()">💳 QRIS</button>
+      </div>
+      <div class="produk">
+        <img src="https://files.catbox.moe/2d2e3f.jpg" alt="Produk 2">
+        <p>🚀 Suntik Sosmed Bergaransi</p>
+        <button class="btn" onclick="toggleQris()">💳 QRIS</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QRIS Pop-up -->
+  <div class="qris-popup" id="qrisPopup">
+    <img src="https://files.catbox.moe/49y4g8.jpg" alt="QRIS">
+    <p>Rekening Dana: 085198699020<br>A.n Akhmad Kusaeri</p>
+    <button class="close-btn" onclick="toggleQris()">Tutup</button>
+  </div>
+
+  <script>
+    function toggleQris() {
+      document.getElementById('qrisPopup').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
