@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profil Fyxzpedia</title>
+  <title>Profil Bisnis</title>
   <style>
     body {
       margin: 0;
@@ -100,6 +100,14 @@
       background: #8e44ad;
     }
 
+    .btn.sosmed {
+      background: #e91e63;
+    }
+
+    .btn.sosmed:hover {
+      background: #c2185b;
+    }
+
     .qris-popup {
       position: fixed;
       top: 50%;
@@ -156,23 +164,31 @@
     <button class="btn" onclick="window.open('https://t.me/Fyxznewcuy', '_blank')">💬Telegram</button>
     <button class="btn" onclick="window.open('https://whatsapp.com/channel/0029Vb2bwRlLY6d0ljXlNr0k', '_blank')">🌐Testi New</button>
     <button class="btn" onclick="window.open('https://www.mediafire.com/folder/2t1ds46ev09z7/KUMPULAN_SC_FREE', '_blank')">🔥Script free</button>
-    <button class="btn" onclick="window.open('https://files.catbox.moe/a6wya3.jpg', '_blank')">⛅List Panel</button>
-    <button class="btn listpanel" onclick="toggleListPanel()">📋 List Panel</button>
     <button class="btn qris" onclick="toggleQris()">💳 Pembayaran / QRIS</button>
-    <button class="btn secondary" onclick="window.open('https://files.catbox.moe/psq3yn.jpg', '_blank')">🛒Suntik Sosmed</button>
+    <button class="btn listpanel" onclick="toggleListPanel()">📋 List Panel</button>
+    <button class="btn sosmed" onclick="toggleSosmed()">🛒 Suntik Sosmed</button>
   </div>
 </div>
 
+<!-- Pop-up QRIS -->
 <div class="qris-popup" id="qrisPopup">
   <img src="https://files.catbox.moe/49y4g8.jpg" alt="QRIS">
   <p>Rek: 085198699020 (BANK Dana a.n Akhmad Kusaeri)</p>
   <button class="close-btn" onclick="toggleQris()">Tutup</button>
 </div>
 
+<!-- Pop-up List Panel -->
 <div class="qris-popup" id="listPanelPopup">
   <img src="https://files.catbox.moe/a6wya3.jpg" alt="List Panel">
   <p>Tekan tombol tutup untuk kembali.</p>
   <button class="close-btn" onclick="toggleListPanel()">Tutup</button>
+</div>
+
+<!-- Pop-up Suntik Sosmed -->
+<div class="qris-popup" id="sosmedPopup">
+  <img src="https://files.catbox.moe/psq3yn.jpg" alt="Suntik Sosmed">
+  <p>Hubungi admin untuk pemesanan.</p>
+  <button class="close-btn" onclick="toggleSosmed()">Tutup</button>
 </div>
 
 <script>
@@ -182,6 +198,10 @@
 
   function toggleListPanel() {
     document.getElementById('listPanelPopup').classList.toggle('show');
+  }
+
+  function toggleSosmed() {
+    document.getElementById('sosmedPopup').classList.toggle('show');
   }
 </script>
 
