@@ -23,6 +23,7 @@
       justify-content: center;
       text-align: center;
       backdrop-filter: blur(5px);
+      padding: 20px;
     }
 
     .logo-container {
@@ -30,14 +31,17 @@
       padding: 20px;
       border-radius: 20px;
       animation: fadeInDown 1s ease;
+      max-width: 400px;
+      width: 100%;
     }
 
     .logo-container img {
       width: 120px;
       height: 120px;
-      object-fit: contain;
-      border-radius: 10px;
+      object-fit: cover;
+      border-radius: 50%;
       margin-bottom: 10px;
+      border: 3px solid white;
     }
 
     .nama {
@@ -53,60 +57,36 @@
 
     .buttons {
       margin-top: 30px;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
+      width: 100%;
+      max-width: 600px;
       animation: fadeInUp 1.2s ease;
     }
 
     .btn {
       background: #25d366;
       border: none;
-      padding: 12px 24px;
+      padding: 12px 20px;
       color: white;
       border-radius: 30px;
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      width: 100%;
     }
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
-    .btn.secondary {
-      background: #3498db;
-    }
-
-    .btn.secondary:hover {
-      background: #2980b9;
-    }
-
-    .btn.qris {
-      background: #f39c12;
-    }
-
-    .btn.qris:hover {
-      background: #e67e22;
-    }
-
-    .btn.listpanel {
-      background: #9b59b6;
-    }
-
-    .btn.listpanel:hover {
-      background: #8e44ad;
-    }
-
-    .btn.sosmed {
-      background: #e91e63;
-    }
-
-    .btn.sosmed:hover {
-      background: #c2185b;
-    }
+    .btn:hover { transform: scale(1.05); }
+    .btn.secondary { background: #3498db; }
+    .btn.secondary:hover { background: #2980b9; }
+    .btn.qris { background: #f39c12; }
+    .btn.qris:hover { background: #e67e22; }
+    .btn.listpanel { background: #9b59b6; }
+    .btn.listpanel:hover { background: #8e44ad; }
+    .btn.sosmed { background: #e91e63; }
+    .btn.sosmed:hover { background: #c2185b; }
 
     .qris-popup {
       position: fixed;
@@ -161,30 +141,27 @@
   </div>
 
   <div class="buttons">
-    <button class="btn" onclick="window.open('https://t.me/Fyxznewcuy', '_blank')">💬Telegram</button>
-    <button class="btn" onclick="window.open('https://whatsapp.com/channel/0029Vb2bwRlLY6d0ljXlNr0k', '_blank')">🌐Testi New</button>
-    <button class="btn" onclick="window.open('https://www.mediafire.com/folder/2t1ds46ev09z7/KUMPULAN_SC_FREE', '_blank')">🔥Script free</button>
+    <button class="btn" onclick="window.open('https://t.me/Fyxznewcuy', '_blank')">💬 Telegram</button>
+    <button class="btn" onclick="window.open('https://whatsapp.com/channel/0029Vb2bwRlLY6d0ljXlNr0k', '_blank')">🌐 Testi New</button>
+    <button class="btn" onclick="window.open('https://www.mediafire.com/folder/2t1ds46ev09z7/KUMPULAN_SC_FREE', '_blank')">🔥 Script Free</button>
     <button class="btn qris" onclick="toggleQris()">💳 Pembayaran / QRIS</button>
     <button class="btn listpanel" onclick="toggleListPanel()">📋 List Panel</button>
     <button class="btn sosmed" onclick="toggleSosmed()">🛒 Suntik Sosmed</button>
   </div>
 </div>
 
-<!-- Pop-up QRIS -->
 <div class="qris-popup" id="qrisPopup">
   <img src="https://files.catbox.moe/49y4g8.jpg" alt="QRIS">
   <p>Rek: 085198699020 (BANK Dana a.n Akhmad Kusaeri)</p>
   <button class="close-btn" onclick="toggleQris()">Tutup</button>
 </div>
 
-<!-- Pop-up List Panel -->
 <div class="qris-popup" id="listPanelPopup">
   <img src="https://files.catbox.moe/a6wya3.jpg" alt="List Panel">
   <p>Tekan tombol tutup untuk kembali.</p>
   <button class="close-btn" onclick="toggleListPanel()">Tutup</button>
 </div>
 
-<!-- Pop-up Suntik Sosmed -->
 <div class="qris-popup" id="sosmedPopup">
   <img src="https://files.catbox.moe/psq3yn.jpg" alt="Suntik Sosmed">
   <p>Hubungi admin untuk pemesanan.</p>
