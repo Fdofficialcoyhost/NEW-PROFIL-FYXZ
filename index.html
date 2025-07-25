@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profil Bisnis</title>
+  <title>Profil Fyxzpedia</title>
   <style>
     body {
       margin: 0;
@@ -74,7 +74,6 @@
 
     .btn:hover {
       transform: scale(1.05);
-      background: #1ebe5a;
     }
 
     .btn.secondary {
@@ -91,6 +90,14 @@
 
     .btn.qris:hover {
       background: #e67e22;
+    }
+
+    .btn.listpanel {
+      background: #9b59b6;
+    }
+
+    .btn.listpanel:hover {
+      background: #8e44ad;
     }
 
     .qris-popup {
@@ -139,7 +146,7 @@
 <body>
 
 <div class="overlay">
-  <div class="logo-container">>
+  <div class="logo-container">
     <img src="https://files.catbox.moe/rr8osz.jpg" alt="Logo">
     <div class="nama">© 𝗙𝘆𝘅𝘇𝗽𝗲𝗱𝗶𝗮 𓅯</div>
     <div class="desc">𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝖲𝖼𝗋𝗂𝗉𝗍 & 𝖬𝖾𝗇𝗒𝖾𝖽𝗂𝖺𝗄𝖺𝗇 𝖫𝖺𝗒𝖺𝗇𝖺𝗇 𝖧𝗈𝗌𝗍𝗂𝗇𝗀 𝖫𝖾𝗇𝗀𝗄𝖺𝗉 , Daftar list Layanan Lengkap? tekan tombol dibawah</div>
@@ -150,9 +157,10 @@
     <button class="btn" onclick="window.open('https://whatsapp.com/channel/0029Vb2bwRlLY6d0ljXlNr0k', '_blank')">🌐Testi New</button>
     <button class="btn" onclick="window.open('https://www.mediafire.com/folder/2t1ds46ev09z7/KUMPULAN_SC_FREE', '_blank')">🔥Script free</button>
     <button class="btn" onclick="window.open('https://files.catbox.moe/a6wya3.jpg', '_blank')">⛅List Panel</button>
+    <button class="btn listpanel" onclick="toggleListPanel()">📋 List Panel</button>
     <button class="btn qris" onclick="toggleQris()">💳 Pembayaran / QRIS</button>
     <button class="btn secondary" onclick="window.open('https://files.catbox.moe/psq3yn.jpg', '_blank')">🛒Suntik Sosmed</button>
-    </div>
+  </div>
 </div>
 
 <div class="qris-popup" id="qrisPopup">
@@ -161,9 +169,19 @@
   <button class="close-btn" onclick="toggleQris()">Tutup</button>
 </div>
 
+<div class="qris-popup" id="listPanelPopup">
+  <img src="https://files.catbox.moe/a6wya3.jpg" alt="List Panel">
+  <p>Tekan tombol tutup untuk kembali.</p>
+  <button class="close-btn" onclick="toggleListPanel()">Tutup</button>
+</div>
+
 <script>
   function toggleQris() {
     document.getElementById('qrisPopup').classList.toggle('show');
+  }
+
+  function toggleListPanel() {
+    document.getElementById('listPanelPopup').classList.toggle('show');
   }
 </script>
 
