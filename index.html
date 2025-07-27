@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reseller Panel - Fyxzpedia</title>
+  <title>Profil Bisnis - Fyxzpedia</title>
   <style>
     body {
       margin: 0;
@@ -80,9 +80,13 @@
 
     .btn:hover { transform: scale(1.05); }
     .btn.secondary { background: #3498db; }
+    .btn.secondary:hover { background: #2980b9; }
     .btn.qris { background: #f39c12; }
+    .btn.qris:hover { background: #e67e22; }
     .btn.listpanel { background: #9b59b6; }
+    .btn.listpanel:hover { background: #8e44ad; }
     .btn.sosmed { background: #e91e63; }
+    .btn.sosmed:hover { background: #c2185b; }
 
     .qris-popup {
       position: fixed;
@@ -136,16 +140,42 @@
   <div class="logo-container">
     <img src="https://files.catbox.moe/rr8osz.jpg" alt="Logo">
     <div class="nama">© 𝗙𝘆𝘅𝘇𝗽𝗲𝗱𝗶𝗮 𓅯</div>
-    <div class="desc">𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝖲𝖼𝗋𝗂𝗉𝗍 & 𝖯𝖺𝗇𝖾𝗅 𝖧𝗈𝗌𝗍𝗂𝗇𝗀 𝖡𝖾𝗋𝗄𝗎𝗁𝖺𝗅𝗂𝗍𝖺𝗌</div>
+    <div class="desc">𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝖲𝖼𝗋𝗂𝗉𝗍 & 𝖬𝖾𝗇𝗒𝖾𝖽𝗂𝖺𝗄𝖺𝗇 𝖫𝖺𝗒𝖺𝗇𝖺𝗇 𝖧𝗈𝗌𝗍𝗂𝗇𝗀 𝖫𝖾𝗇𝗀𝗄𝖺𝗉</div>
   </div>
 
   <div class="buttons">
     <button class="btn" onclick="window.open('https://t.me/Fyxznewcuy', '_blank')">💬 Telegram</button>
+    <button class="btn" onclick="window.open('https://whatsapp.com/channel/0029Vb6S58V1noz1Vq0qq40B', '_blank')">🌎 Testimoni</button>
+    <button class="btn" onclick="window.open('https://www.mediafire.com/folder/2t1ds46ev09z7/KUMPULAN_SC_FREE', '_blank')">🔥 Script Free</button>
+    <button class="btn qris" onclick="toggleQris()">💳 Pembayaran / QRIS</button>
+    <button class="btn listpanel" onclick="toggleListPanel()">📋 List Panel</button>
+    <button class="btn sosmed" onclick="toggleSosmed()">🛒 Suntik Sosmed</button>
     <button class="btn secondary" onclick="toggleReseller()">📦 Join Reseller Panel</button>
   </div>
 </div>
 
-<!-- Pop-up Join Reseller Panel -->
+<!-- POP-UP: Pembayaran -->
+<div class="qris-popup" id="qrisPopup">
+  <img src="https://files.catbox.moe/49y4g8.jpg" alt="QRIS">
+  <p>Rek: 085198699020 (BANK Dana a.n Akhmad Kusaeri)</p>
+  <button class="close-btn" onclick="toggleQris()">Tutup</button>
+</div>
+
+<!-- POP-UP: List Panel -->
+<div class="qris-popup" id="listPanelPopup">
+  <img src="https://files.catbox.moe/a6wya3.jpg" alt="List Panel">
+  <p>Bergaransi Full Dan Berkualitas tinggi</p>
+  <button class="close-btn" onclick="toggleListPanel()">Tutup</button>
+</div>
+
+<!-- POP-UP: Suntik Sosmed -->
+<div class="qris-popup" id="sosmedPopup">
+  <img src="https://files.catbox.moe/psq3yn.jpg" alt="Suntik Sosmed">
+  <p>Hubungi admin untuk pemesanan.</p>
+  <button class="close-btn" onclick="toggleSosmed()">Tutup</button>
+</div>
+
+<!-- POP-UP: Reseller Panel -->
 <div class="qris-popup" id="resellerPopup">
   <p style="text-align:left; font-size:14px; max-width:400px; margin:auto;">
     📢 <strong>APA ITU RESELLER PANEL?</strong><br>
@@ -182,6 +212,18 @@
 </div>
 
 <script>
+  function toggleQris() {
+    document.getElementById('qrisPopup').classList.toggle('show');
+  }
+
+  function toggleListPanel() {
+    document.getElementById('listPanelPopup').classList.toggle('show');
+  }
+
+  function toggleSosmed() {
+    document.getElementById('sosmedPopup').classList.toggle('show');
+  }
+
   function toggleReseller() {
     document.getElementById('resellerPopup').classList.toggle('show');
   }
