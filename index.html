@@ -142,8 +142,8 @@
 <div class="overlay">
   <div class="logo-container">
     <img src="https://files.catbox.moe/rr8osz.jpg" alt="Logo">
-    <div class="nama">© 𝗙𝘆𝘇𝘇𝗽𝗲𝗱𝗶𝗮 𓅯</div>
-    <div class="desc">𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝖲𝖼𝗋𝗂𝗉𝗍 & 𝖬𝖾𝗇𝗒𝖾𝗱𝗂𝖺𝗄𝖺𝗇 𝖫𝖺𝗒𝖺𝗻𝖺𝗇 𝖧𝗈𝗌𝗧𝗂𝗇𝗀 𝖫𝖾𝗇𝗀𝗄𝖺𝗉</div>
+    <div class="nama">© 𝗙𝘆𝘅𝘇𝗽𝗲𝗱𝗶𝗮 𓅯</div>
+    <div class="desc">𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝖲𝖼𝗋𝗂𝗉𝗍 & 𝖬𝖾𝗇𝗒𝖾𝖽𝗂𝖺𝗄𝖺𝗇 𝖫𝖺𝗒𝖺𝗇𝖺𝗇 𝖧𝗈𝗌𝗍𝗂𝗇𝗀 𝖫𝖾𝗇𝗀𝗄𝖺𝗉</div>
   </div>
 
   <div class="buttons">
@@ -156,8 +156,6 @@
     <button class="btn listpanel" onclick="toggleListPanel()">📋 List Panel</button>
     <button class="btn sosmed" onclick="toggleSosmed()">🛒 Suntik Sosmed</button>
     <button class="btn secondary" onclick="toggleReseller()">📦 Reseller / Admin Panel</button>
-    <!-- Tambahan tombol Script Fastbot -->
-    <button class="btn qris" onclick="toggleFastbot()">📂 Script Fastbot</button>
   </div>
 </div>
 
@@ -221,7 +219,23 @@
   <button class="close-btn" onclick="toggleReseller()">Tutup</button>
 </div>
 
-<!-- POP-UP: Script Fastbot -->
-<div class="qris-popup" id="fastbotPopup">
-  <img src="https://files.catbox.moe/vg52r2.jpg" alt="🧩 Script Fastbot">
-  <p>Rp30.000 Free Updates Unlimited<
+<script>
+  function toggleQris() {
+    document.getElementById('qrisPopup').classList.toggle('show');
+  }
+
+  function toggleListPanel() {
+    document.getElementById('listPanelPopup').classList.toggle('show');
+  }
+
+  function toggleSosmed() {
+    document.getElementById('sosmedPopup').classList.toggle('show');
+  }
+
+  function toggleReseller() {
+    document.getElementById('resellerPopup').classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>
